@@ -1,0 +1,83 @@
+@use  'variables' as v;
+
+html{
+    font-size: 62.5%;
+    box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after{
+    box-sizing: inherit;
+}
+
+body{
+    font-family: v.$fuente-principal;
+    font-size: 1.6rem;
+
+    &.body--scroll{
+        padding-top: 8rem;
+    }
+}
+
+p{
+    font-size: 2rem;
+    color: v.$negro;
+}
+
+.container{
+    width: 90%;
+    max-width: 120rem;
+    margin: 0 auto;
+    overflow: hidden;
+    padding: v.$padding-container;
+}
+
+a{
+    text-decoration: none;
+}
+
+h1,h2,h3,h4{
+    margin: 0 0 5rem 0;
+}
+
+h1{
+    font-size: 4rem;
+}
+h2{
+    font-size: 3.6rem;
+}
+h3,h4{
+    font-size: 3rem;
+}
+
+img{
+    max-width: 100%;
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+//CTA
+.cta__container{
+    overflow: hidden;
+
+    .cta{
+        display: inline-block;
+        background-color: v.$rojo;
+        justify-self: center;
+        color: v.$amarillo;
+        text-decoration: none;
+        font-size: 1em;
+        padding: 1.3rem 2rem;
+        border-radius: 3rem;
+        transition: all .3s;
+
+        &:hover{
+            font-size: 1.3em;
+            font-weight: bold;
+            background-color: v.$amarillo;
+            color: v.$rojo;
+        } 
+    }
+}

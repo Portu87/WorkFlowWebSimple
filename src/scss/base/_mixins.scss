@@ -1,0 +1,39 @@
+@use 'base/variables' as v;
+
+
+//Media Queries
+@mixin phone{
+    @media (max-width: v.$phone){
+        @content;
+    }
+}
+
+@mixin phoneXL{
+    @media (max-width: v.$phoneXL){
+        @content;
+    }
+}
+
+@mixin tabletS{
+    @media (max-width: v.$tabletS){
+        @content;
+    }
+}
+
+@mixin tablet{
+    @media (max-width: v.$tablet){
+        @content;
+    }
+}
+
+@mixin desktop{
+    @media (max-width: v.$desktop){
+        @content;
+    }
+}
+
+@mixin desktopXL{
+    @media (max-width: v.$desktopXL){
+        @content;
+    }
+}
