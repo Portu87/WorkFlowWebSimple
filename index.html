@@ -4,46 +4,193 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!-- mobile -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="theme-color" content="#444CF7">
-    <title>Marketing y Webs para Restaurantes y Bares</title>
-    <meta name="title" content="Marketing y Webs para Restaurantes y Bares">
-    <meta name="description"
-        content="¿Tienes un comercio hostelero, y no tienes web, o está anticuada? Tenemos la solución más económica del mercado!">
+    <meta name="theme-color" content="#ED1C24">
+    <!-- title -->
+    <title>OrderApp</title>
+    <meta name="title" content="OrderApp">
+    <meta name="description" content="Aplicación de pedidos, reservas, take-away">
+    <!-- seo rss -->
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://halcondigital/digitalleads.es/">
     <meta property="og:title" content="Marketing y Webs para Restaurantes y Bares">
-    <meta property="og:description"
-        content="¿Tienes un comercio hostelero, y no tienes web, o está anticuada? Tenemos la solución más económica del mercado!">
+    <meta property="og:description" content="Aplicación de pedidos, reservas, take-away">
     <meta property="og:image" content="https://halcondigital/digitalleads.es/build/img/logo-reducido.png">
     <meta property="twitter:card" content="summary_large_image">
     <meta property="twitter:url" content="https://halcondigital/digitalleads.es/">
     <meta property="twitter:title" content="Marketing y Webs para Restaurantes y Bares">
-    <meta property="twitter:description"
-        content="¿Tienes un comercio hostelero, y no tienes web, o está anticuada? Tenemos la solución más económica del mercado!">
+    <meta property="twitter:description" content="Aplicación de pedidos, reservas, take-away">
     <meta property="twitter:image" content="https://halcondigital/digitalleads.es/build/img/logo-reducido.png">
-    <link rel="stylesheet" href="build/css/app.css">
-    <link rel="shortcut icon" href="build/img/favicon.png" type="image/icon">
+    <!--    icons font awesome cdn link   -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+        integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- slider swiperjs css cdn link -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css" />
+    <!-- google font link -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;600;700;900&display=swap"
         rel="stylesheet">
+    <!-- favicon -->
+    <link rel="shortcut icon" href="build/img/favicon.png" type="image/icon">
+    <!-- custom css file link -->
+    <link rel="stylesheet" href="build/css/app.css">
 </head>
 
 <body>
-    <header class="hero">
-        <h1>Hola Mundo</h1>
+    <!-- header section -->
+    <header>
 
+        <a href="#" class="logo"><i class="fa-solid fa-utensils"></i>OrderApp.</i></a>
+
+        <nav class="navbar">
+            <a class="" href="#home">home</a>
+            <a href="#dishes">dishes</a>
+            <a href="#about">about</a>
+            <a href="#menu">menu</a>
+            <a href="#review">rewiev</a>
+            <a href="#order">order</a>
+        </nav>
+
+        <div class="icons">
+            <i class="fas fa-bars" id="menu-bars"></i>
+            <i class="fas fa-search" id="search-icon"></i>
+            <a href="#" class="fas fa-heart"></a>
+            <a href="#" class="fas fa-shopping-cart"></a>
+        </div>
     </header>
+    <!-- header section end-->
 
-    <main>
-        <picture>
-            <source srcset="build/img/fans.avif" type="image/avif">
-            <source srcset="build/img/fans.webp" type="image/webp">
-            <img loading="lazy" width="200" height="300" src="build/img/fans.jpg" alt="fans">
-        </picture>
-    </main>
+    <!-- search form -->
+    <form action="" id="search-form">
+        <input type="search" placeholder="buscar..." name="" id="search-box">
+        <label for="search-box" class="fas fa-search"></label>
+        <i class="fas fa-times" id="close"></i>
+    </form>
+    <!-- search form end -->
 
+    <!-- home section -->
+    <section class="home section" id="home">
+
+        <div class="swiper home-slider">
+
+            <div class="swiper-wrapper wrapper">
+
+                <div class="swiper-slide slide">
+                    <div class="content">
+                        <span>our special dish</span>
+                        <h3>spicy noodles</h3>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus repudiandae rerum vel.
+                        </p>
+                        <a href="#" class="btn">order now</a>
+                    </div>
+                    <div class="image">
+                        <picture>
+                            <source srcset="build/img/home-img-1.avif" type="image/avif">
+                            <source srcset="build/img/home-img-1.webp" type="image/webp">
+                            <img loading="lazy" src="build/img/home-img-1.png" alt="">
+                        </picture>
+                    </div>
+                </div>
+
+                <div class="swiper-slide slide">
+                    <div class="content">
+                        <span>our special dish</span>
+                        <h3>fried chicken</h3>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus repudiandae rerum vel.
+                        </p>
+                        <a href="#" class="btn">order now</a>
+                    </div>
+                    <div class="image">
+                        <picture>
+                            <source srcset="build/img/home-img-2.avif" type="image/avif">
+                            <source srcset="build/img/home-img-2.webp" type="image/webp">
+                            <img loading="lazy" src="build/img/home-img-2.png" alt="">
+                        </picture>
+                    </div>
+                </div>
+
+                <div class="swiper-slide slide">
+                    <div class="content">
+                        <span>our special dish</span>
+                        <h3>hot pizza</h3>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus repudiandae rerum vel.
+                        </p>
+                        <a href="#" class="btn">order now</a>
+                    </div>
+                    <div class="image">
+                        <picture>
+                            <source srcset="build/img/home-img-3.avif" type="image/avif">
+                            <source srcset="build/img/home-img-3.webp" type="image/webp">
+                            <img loading="lazy" src="build/img/home-img-3.png" alt="">
+                        </picture>
+                    </div>
+                </div>
+            </div>
+            <div class="swiper-pagination"></div>
+        </div>
+
+    </section>
+    <!-- home section end -->
+
+     <!-- footer section -->
+     <footer class="footer">
+
+        <div class="box-container">
+
+            <div class="box">
+                <h3>locations</h3>
+                <a href="">navarra</a>
+                <a href="">madrid</a>
+                <a href="">euskadi</a>
+                <a href="">barcelona</a>
+                <a href="">malaga</a>
+            </div>
+
+            <div class="box">
+                <h3>quick links</h3>
+                <a href="#home">home</a>
+                <a href="#dishes">dishes</a>
+                <a href="#about">about</a>
+                <a href="#menu">menu</a>
+                <a href="#review">review</a>
+                <a href="#order">order</a>
+            </div>
+
+            <div class="box">
+                <h3>contact info</h3>
+                <a href="#">+123-456-789</a>
+                <a href="#">+123-111-932</a>
+                <a href="#">email@email.com</a>
+                <a href="#">navarra, spain</a>
+            </div>
+
+            <div class="box">
+                <h3>follow us</h3>
+                <a href="#">facebook</a>
+                <a href="#">twitter</a>
+                <a href="#">instagram</a>
+
+            </div>
+
+        </div>
+
+        <div class="credit"> copyright &copy; 2022 by <span>Halcón Digital Marketing</span></div>
+
+    </footer>
+    <!-- footer section end -->
+
+    <!-- loader part -->
+    <div class="loader-container">
+            <img src="build/img/loader.gif" alt="">
+    </div>
+    <!-- loader part -->
+
+    <!-- swiperjs cdn script -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+    <!-- custopm js file link -->
     <script src="/build/js/main.js"></script>
 </body>
 

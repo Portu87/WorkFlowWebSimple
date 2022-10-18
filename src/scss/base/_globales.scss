@@ -1,23 +1,93 @@
 @use  'variables' as v;
+@use 'base/mixins' as m;
 
 html{
     font-size: 62.5%;
-    box-sizing: border-box;
+    overflow-x: hidden;
+    scroll-padding-top: 5.5rem;
+    scroll-behavior: smooth;
+    // box-sizing: border-box;
+    @include m.desktop{
+        font-size: 50%;
+    }
+    @include m.tabletXL{
+        font-size: 45%;
+    }
+    @include m.phoneS{
+        font-size: 38%;
+    }
 }
 
-*,
-*:before,
-*:after{
-    box-sizing: inherit;
+// *,
+// *:before,
+// *:after{
+//     // box-sizing: inherit;
+// }
+
+*{
+    font-family: v.$fuente-principal;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    text-transform: capitalize;
+    transition: all .2s linear;
 }
 
 body{
-    font-family: v.$fuente-principal;
     font-size: 1.6rem;
 
-    &.body--scroll{
-        padding-top: 8rem;
+    // &.body--scroll{
+    //     padding-top: 8rem;
+    // }
+}
+
+section{
+    padding: 2rem 9%;
+    
+
+    &:nth-child(even){
+        background: v.$ligth-color;
     }
+    @include m.desktopXL{
+        padding:2rem
+    }
+}
+
+.sub-heading{
+    text-align: center;
+    color: v.$color-main;
+    font-size: 2rem;
+    padding-top: 1rem;
+}
+
+.heading{
+    text-align: center;
+    color: v.$black;
+    font-size: 3rem;
+    padding-bottom: 2rem;
+    text-transform: uppercase;
+}
+
+.btn{
+    margin-top: 1rem;
+    display: inline-block;
+    font-size: 1.7rem;
+    color: v.$white;
+    background-color: v.$black;
+    border-radius: .5rem;
+    cursor: pointer;
+    padding: .8rem 3rem;
+
+    &:hover{
+        background: v.$color-main;
+        letter-spacing: .1rem;
+    }
+}
+
+input:focus,
+textarea:focus{
+    border: none;
 }
 
 p{
@@ -25,20 +95,9 @@ p{
     color: v.$negro;
 }
 
-.container{
-    width: 90%;
-    max-width: 120rem;
-    margin: 0 auto;
-    overflow: hidden;
-    padding: v.$padding-container;
-}
 
 a{
     text-decoration: none;
-}
-
-h1,h2,h3,h4{
-    margin: 0 0 5rem 0;
 }
 
 h1{
@@ -51,33 +110,5 @@ h3,h4{
     font-size: 3rem;
 }
 
-img{
-    max-width: 100%;
-    width: 100%;
-    height: auto;
-    display: block;
-}
 
-//CTA
-.cta__container{
-    overflow: hidden;
 
-    .cta{
-        display: inline-block;
-        background-color: v.$rojo;
-        justify-self: center;
-        color: v.$amarillo;
-        text-decoration: none;
-        font-size: 1em;
-        padding: 1.3rem 2rem;
-        border-radius: 3rem;
-        transition: all .3s;
-
-        &:hover{
-            font-size: 1.3em;
-            font-weight: bold;
-            background-color: v.$amarillo;
-            color: v.$rojo;
-        } 
-    }
-}

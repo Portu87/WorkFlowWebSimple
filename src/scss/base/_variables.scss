@@ -7,18 +7,29 @@ $amarillo: #FFC001;
 $rojo: #ED1C24; 
 $rojo-claro: #e74d52;
 $azul: #444CF7;
-$azul-claro: #e5e5f7;
+$azul-claro: #a4a4f7;
+$azul-claro2: #e5e5f7;
 $negro: #000;
-$blanco: #fff;
-$gris:  #696871;
+$white: #fff;
+$grey:  #696871;
+
+$color-main: $rojo;
+$black: $azul-oscuro;
+$ligth-color: $azul-claro2;
 
 //Paddings
 $padding-container: 10rem 0;
 
+//box shadow
+$box-shadow:0 .5rem 1.5rem rgba(0,0,0,.1);
+
 //Tamaños de Media Queries
+$phoneXS: 285px;
+$phoneS: 316px;
 $phone: 420px;
 $phoneXL: 690px;
 $tabletS: 690px;
 $tablet: 768px;
+$tabletXL: 850px;
 $desktop: 992px;
 $desktopXL: 1200px;

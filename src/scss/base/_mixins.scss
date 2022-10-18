@@ -2,6 +2,24 @@
 
 
 //Media Queries
+@mixin phoneXS{
+    @media (max-width: v.$phoneXS){
+        @content;
+    }
+}
+
+@mixin phoneS{
+    @media (max-width: v.$phoneS){
+        @content;
+    }
+}
+
+@mixin minPhoneS{
+    @media (min-width: v.$phoneS){
+        @content;
+    }
+}
+
 @mixin phone{
     @media (max-width: v.$phone){
         @content;
@@ -22,6 +40,12 @@
 
 @mixin tablet{
     @media (max-width: v.$tablet){
+        @content;
+    }
+}
+
+@mixin tabletXL{
+    @media (max-width: v.$tabletXL){
         @content;
     }
 }

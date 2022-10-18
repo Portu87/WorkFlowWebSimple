@@ -1,0 +1,51 @@
+@use 'base/mixins' as m;
+@use 'base/variables' as v;
+
+.footer{
+    padding: 2rem 9%;
+
+    @include m.desktopXL{
+        padding:2rem
+    }
+    
+    .box-container{
+        // text-align: center;
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+        gap: 1.5rem;
+
+        .box{
+            
+            h3{
+                padding: .5rem  0;
+                font-size: 2.5rem;
+                color: v.$black;
+            }
+            a{
+                display: block;
+                padding: .5rem  0;
+                font-size: 1.5rem;
+                color: v.$grey;
+
+                &:hover{
+                    color: v.$color-main;
+                    text-decoration: underline;
+                }
+            }
+        }
+    }
+
+    .credit{
+        text-align: center;
+        border-top: .1rem   solidrgba(0,0,0,.1);
+        font-size: 2rem;
+        color: v.$black;
+        padding: .5rem;
+        padding-top: 1.5rem;
+        margin-top: 1.5rem;
+
+        span{
+            color: v.$color-main;
+        }
+    }
+}

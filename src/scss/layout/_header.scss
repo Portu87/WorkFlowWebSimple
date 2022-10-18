@@ -1,6 +1,187 @@
 @use 'base/mixins' as m;
 @use 'base/variables' as v;
 
-h1{
-    text-transform: uppercase;
+header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background:v.$white;
+    padding: 1rem 7%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 1000;
+    box-shadow: v.$box-shadow;
+
+    @include m.desktop{
+        padding: 1rem 2rem;
+    }
+    @include m.phoneXS{
+        padding: .5rem 1rem;
+    }
+
+    .logo{
+        color:  v.$black;
+        font-size: 2.5rem;
+        font-weight: bolder;
+
+        @include m.phoneXS{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+
+        i{
+            color: v.$color-main;
+
+            &.fa-utensils{
+                margin-right: .5rem;
+            }
+        }
+    }
+
+    .navbar{
+
+       
+        @include m.tablet{
+            position:absolute;
+            top: 100%;
+            left: 0;
+            right: 0;
+            background: v.$white;
+            border-top: .1rem solid rgba(0,0,0,.2);
+            border-bottom: .1rem solid rgba(0,0,0,.2);
+            padding: 1rem;
+            clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+
+        }
+        a{
+            font-size: 1.7rem;
+            border-radius: .5rem;
+            padding: .5rem 1.5rem;
+            color: v.$black;
+
+            @include m.tablet{
+                display: block;
+                padding: 1.5rem;
+                margin: 1rem;
+                font-size: 2rem;
+                background: v.$ligth-color;
+            }
+            &:hover, &.active{
+                color: v.$white;
+                background: v.$color-main;
+            }
+        }
+
+        &.active{
+            clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+        }
+    }
+
+    .icons{
+
+        @include m.phoneXS{
+            display:flex;
+            flex-wrap:wrap;
+            justify-content: center;
+            align-items: center;
+        }
+        #menu-bars{
+            display: none;
+
+            @include m.tablet{
+                display: inline-block;
+            }
+        }
+
+        i, 
+        a{
+            cursor: pointer;
+            margin-left: .5rem;
+            height: 4.5rem;
+            line-height: 4.5rem;
+            width: 4.5rem;
+            text-align: center;
+            font-size: 1.7rem;
+            color: v.$black;
+            border-radius: 50%;
+            background: v.$ligth-color;
+        }
+        i:hover,
+        a:hover{
+            color: v.$white;
+            background: v.$color-main;
+            transform: rotate(360deg);
+        }
+    }
 }
+
+// search form
+#search-form{
+    position: fixed;
+    top: -110%;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    z-index: 1004;
+    background: rgba(0,0,0,.8);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 1rem;
+
+    @include m.minPhoneS{
+        font-size: 1.5rem;
+    }
+
+    &.active{
+        top: 0;
+    }
+
+    #search-box{        
+        width: 50rem;
+        border: none;
+        border-bottom: .1rem solid v.$white;
+        padding: 1rem 0;
+        color: v.$white;
+        font-size: 3rem;
+        text-transform: none;
+        background: none;
+
+        @include m.tablet{
+            width: 90%;
+            margin: 0 1rem
+        }
+
+        &::placeholder{
+            color: v.$ligth-color;
+        }
+
+        &::-webkit-search-cancel-button{
+            -webkit-appearence: none;
+        }
+    }
+
+    label{
+        color: v.$white;
+        cursor: pointer;
+        font-size: 3rem;
+
+        &:hover{
+            color: v.$color-main;
+        }
+    }
+
+    #close{
+        position: absolute;
+        color: v.$white;
+        cursor: pointer;
+        top: 2rem;
+        right: 3rem;
+        font-size: 5rem;
+    }
+}
+
